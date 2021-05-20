@@ -114,3 +114,6 @@ Filter properties that should not be received by a method handler.
   - Accepts the input, but removes all the invalid properties on the output
 - forbidNonWhitelisted: true,
   - Doesn't even accept the input, throwing a 400 error
+- transform: true,
+  - makes console.log(createCoffeeDto instanceof CreateCoffeeDto) return true
+  - this feature may impact performance

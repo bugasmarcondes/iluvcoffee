@@ -22,7 +22,6 @@ export class CoffeesService {
   }
 
   findOne(id: string) {
-    throw 'A random error'; // results in a 500 error and it is a good practice to use it to handle errors
     const coffee = this.coffees.find((item) => item.id === +id);
     if (!coffee) {
       throw new NotFoundException(`Coffee #${id} not found`);
