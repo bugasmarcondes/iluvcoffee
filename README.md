@@ -41,3 +41,11 @@ $ nestjs new
 # iluvcoffee
 # npm
 ```
+
+**Generating a controller**
+
+```bash
+nest generate controller
+nest generate controller modules/abc
+nest generate controller modules/abc --dry-run
+```
