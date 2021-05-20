@@ -62,4 +62,23 @@ nest generate service modules/abc --dry-run
 
 In NestJS, each service is a provider. It's just a class annoted with the decorator called @Injectable.
 
-Provider, it can inject dependencies so NestJS system will handle all of that instead of the developer having to do it manually
+Provider, it can inject dependencies so NestJS system will handle all of that instead of the developer having to do it manually.
+
+**Modules**
+
+They are an effective way to organize the application components as they encapsulate a closely related set of capabilities.
+
+- Manage complexity.
+- Develop with SOLID principles, specially as the size of the application or team grows.
+
+```bash
+nest generate module
+nest g module coffees
+```
+
+A module contains:
+
+- Controllers, API routes we want this module to instantiate.
+- Exports, list of providers that are available wherever we import this module.
+- Imports, list of other modules that this module requires.
+- Providers, list of services that need to be instatiated by the Nest injector. Any providers here will be available only whitin this module itself, unless added to the exports array above.
