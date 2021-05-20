@@ -157,3 +157,13 @@ npm i @nestjs/typeorm typeorm pg
 ```
 
 The repository class acts like an abstraction over the data source and exposes a variety of useful methods to interact with the records stored in the database.
+
+Relation between two entities:
+
+- One (primary table) to one (foreign table)
+- One (primary table) to many (foreign table) [many to one]
+- Many (primary table) to many (foreign table)
+
+```bash
+nest g class coffees/entities/flavor.entity --no-spec
+```
