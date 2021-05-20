@@ -6,13 +6,15 @@ import {
   Param,
   Patch,
   Post,
+  Query,
 } from '@nestjs/common';
 
 @Controller('coffees')
 export class CoffeesController {
   @Get()
-  findAll() {
-    return 'This action returns all coffees';
+  findAll(@Query() paginationQuery) {
+    const { limit, offset } = paginationQuery;
+    return `This action returns all coffees. Limit ${limit}, offset: ${offset}`;
   }
   // Loose compatibility with Nest features that depend on Nest standard response handling, which are Interceptors and HttpCode decorator
   // It becomes plataform dependent and harder to test (mock response object)
