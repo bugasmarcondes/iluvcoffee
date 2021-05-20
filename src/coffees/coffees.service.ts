@@ -1,4 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { Coffee } from './entities/coffee.entity';
 
 @Injectable()
@@ -17,7 +22,13 @@ export class CoffeesService {
   }
 
   findOne(id: string) {
-    return this.coffees.find((item) => item.id === +id);
+    throw 'A random error'; // results in a 500 error and it is a good practice to use it to handle errors
+    const coffee = this.coffees.find((item) => item.id === +id);
+    if (!coffee) {
+      throw new NotFoundException(`Coffee #${id} not found`);
+      // throw new HttpException(`Coffee #${id} not found`, HttpStatus.NOT_FOUND);
+    }
+    return coffee;
   }
 
   create(createCoffeeDto: any) {
