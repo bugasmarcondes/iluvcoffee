@@ -34,6 +34,13 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Troubleshoot
+
+```bash
+# check which ports are in use
+sudo lsof -i -P | grep LISTEN
+```
+
 ## Tutorial
 
 ```bash
@@ -136,3 +143,9 @@ Docker compose is a tool for defining and running multiple container Docker appl
 Container, is simply another process on your machine that has been isolated from all other processes on the host machine.
 
 Image, contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
+
+Creation of the "docker-compose.yml" file:
+
+```bash
+docker-compose up -d
+```
