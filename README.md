@@ -149,3 +149,9 @@ Creation of the "docker-compose.yml" file:
 ```bash
 docker-compose up -d
 ```
+
+**TypeORM**
+
+```bash
+npm i @nestjs/typeorm typeorm pg
+```
