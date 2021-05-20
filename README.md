@@ -94,3 +94,16 @@ Is an object that is used to encapsulate data and send it from one application t
 nest g class coffees/dto/create-coffee.dto --no-spec
 nest g class coffees/dto/update-coffee.dto --no-spec
 ```
+
+**Validate input data**
+
+ValidationPipe, automatically validate the encoming requests.
+
+- If we send invalid data, it automatically responds with a 400 error.
+
+```bash
+npm i class-validator class-transformer
+npm i @nestjs/mapped-types
+```
+
+With @nestjs/mapped-types "PartialType", it marks all the fields from the referenced DTO as optional, and also inherits all the validation rules applied.
