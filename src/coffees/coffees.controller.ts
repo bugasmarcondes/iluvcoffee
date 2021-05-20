@@ -2,10 +2,17 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('coffees')
 export class CoffeesController {
-  @Get('flavors')
+  @Get()
   findAll() {
     return 'This action returns all coffees';
   }
+  // Loose compatibility with Nest features that depend on Nest standard response handling, which are Interceptors and HttpCode decorator
+  // It becomes plataform dependent and harder to test (mock response object)
+  // It is possible to specify the name of the nested route by placing a string inside the decorator
+  // @Get('flavors')
+  // findAll(@Res() response) {
+  //   response.status(200).send('This action returns all coffees');
+  // }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
