@@ -117,3 +117,22 @@ Filter properties that should not be received by a method handler.
 - transform: true,
   - makes console.log(createCoffeeDto instanceof CreateCoffeeDto) return true
   - this feature may impact performance
+
+**Docker**
+
+Is a plataform for developers to build, run and share (ship) applications that are within containers.
+
+The use of containers to deploy applications is called containerization.
+
+- Flexible
+- Lightweight
+- Portable
+- Loosely coupled
+
+Docker compose is a tool for defining and running multiple container Docker applications. We configure our services with a YML file.
+
+- With a single command we can create and start all the services from our configuration on any machine.
+
+Container, is simply another process on your machine that has been isolated from all other processes on the host machine.
+
+Image, contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
