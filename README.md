@@ -107,3 +107,10 @@ npm i @nestjs/mapped-types
 ```
 
 With @nestjs/mapped-types "PartialType", it marks all the fields from the referenced DTO as optional, and also inherits all the validation rules applied.
+
+Filter properties that should not be received by a method handler.
+
+- whitelist: true,
+  - Accepts the input, but removes all the invalid properties on the output
+- forbidNonWhitelisted: true,
+  - Doesn't even accept the input, throwing a 400 error
