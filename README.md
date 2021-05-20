@@ -82,3 +82,15 @@ A module contains:
 - Exports, list of providers that are available wherever we import this module.
 - Imports, list of other modules that this module requires.
 - Providers, list of services that need to be instatiated by the Nest injector. Any providers here will be available only whitin this module itself, unless added to the exports array above.
+
+**DTO**
+
+Is an object that is used to encapsulate data and send it from one application to another. It help us define the interfaces for input and output within our system.
+
+- Shape the object the way we want/need.
+- Provide type safety.
+
+```bash
+nest g class coffees/dto/create-coffee.dto --no-spec
+nest g class coffees/dto/update-coffee.dto --no-spec
+```
