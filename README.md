@@ -226,3 +226,18 @@ When we ask for a dependency in a class constructor, NestJS handles and retrieve
 3. The provider was registered at the module, inside the providers property.
 
 Providers have a singleton scope (that's the default), so NestJS will either create an instance of the class or return the one that was already in cache.
+
+**Module Encapsulation**
+
+By default, NestJS modules encapsulate their providers.
+
+```bash
+nest g mo coffee-rating
+nest g s coffee-rating
+```
+
+If we intend to import and use any module/service, we should also make sure to export the service/provider in order to avoid this kind of error:
+
+```bash
+[Nest] 21441 - 21/05/2021 12:26:11 [ExceptionHandler] Nest can't resolve dependencies of the CoffeeRatingService (?). Please make sure that the argument CoffeesService at index [0] is available in the CoffeeRatingModule context.
+```
