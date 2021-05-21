@@ -214,3 +214,15 @@ npx typeorm migration:run
 # to revert the migration (Down method)
 npx typeorm migration:revert
 ```
+
+**Dependency Injection**
+
+Is a technique where we delegate the instantiation of dependencies to an IOC container, which in this case is NestJS runtime system itself.
+
+When we ask for a dependency in a class constructor, NestJS handles and retrieves the object to us. The proccess is the following:
+
+1. @Injectable() decorator declares a class (the service) that can be managed by the NestJS container. It marks the class as a provider.
+2. Request the class inside the constructor (the controller).
+3. The provider was registered at the module, inside the providers property.
+
+Providers have a singleton scope (that's the default), so NestJS will either create an instance of the class or return the one that was already in cache.
