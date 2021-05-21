@@ -257,6 +257,6 @@ There are 3 types of scope providers:
     - @Injectable({ scope: Scope.TRANSIENT })
   - (e.g.: coffees.module.ts > after useFactory)
     - scope: Scope.TRANSIENT
-- Request, provides a new instance of the provider exclusively for each incoming request. The instance is automatically garbage collected after the request has completed processing.
+- Request, provides a new instance of the provider exclusively for each incoming request. The instance is automatically garbage collected after the request has completed processing. Using it may have a high impact on performance.
   - (e.g.: coffees.service.ts)
     - @Injectable({ scope: Scope.REQUEST })
