@@ -185,3 +185,7 @@ Transaction statements can help us to achieve multiple actions to our database e
 ```bash
 nest g class events/entities/event.entity --no-spec
 ```
+
+**Indexes**
+
+Are special lookup tables that our DB search engine can use to speed up data retrieval.
