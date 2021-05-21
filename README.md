@@ -169,3 +169,9 @@ nest g class coffees/entities/flavor.entity --no-spec
 ```
 
 Relations are not eagerly loaded by default.
+
+**Pagination**
+
+```bash
+nest g class common/dto/pagination-query.dto --no-spec
+```

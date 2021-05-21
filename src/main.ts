@@ -9,6 +9,9 @@ async function bootstrap() {
       whitelist: true,
       transform: true,
       forbidNonWhitelisted: true,
+      transformOptions: {
+        enableImplicitConversion: true, // used to automatically do what @Type (class-transform) was doing
+      },
     }),
   );
   await app.listen(3000);
