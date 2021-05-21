@@ -241,3 +241,22 @@ If we intend to import and use any module/service, we should also make sure to e
 ```bash
 [Nest] 21441 - 21/05/2021 12:26:11 [ExceptionHandler] Nest can't resolve dependencies of the CoffeeRatingService (?). Please make sure that the argument CoffeesService at index [0] is available in the CoffeeRatingModule context.
 ```
+
+**Providers Scope**
+
+Once the application has bootstraped, all singleton providers have been instantiated.
+
+There are 3 types of scope providers:
+
+- Singleton (default).
+  - (e.g.: coffees.service.ts)
+    - @Injectable()
+    - @Injectable({ scope: Scope.DEFAULT })
+- Transient, are not shared across consumers. Each consumer that injects a transient provider, will receive a new dedicated instance of that provider.
+  - (e.g.: coffees.service.ts)
+    - @Injectable({ scope: Scope.TRANSIENT })
+  - (e.g.: coffees.module.ts > after useFactory)
+    - scope: Scope.TRANSIENT
+- Request, provides a new instance of the provider exclusively for each incoming request. The instance is automatically garbage collected after the request has completed processing.
+  - (e.g.: coffees.service.ts)
+    - @Injectable({ scope: Scope.REQUEST })
