@@ -12,8 +12,13 @@ export class Coffee {
   @PrimaryGeneratedColumn()
   id: number;
 
+  // if the name of the property is changed, then migrations will delete the column, create a new column, and all the data in that will be lost
+  // that's why we can leverage the use of the migration file to specify how to apply the Up and Down the changes into the DB
   @Column()
   name: string;
+
+  @Column({ nullable: true })
+  description: string;
 
   @Column()
   brand: string;

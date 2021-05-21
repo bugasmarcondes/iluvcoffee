@@ -189,3 +189,28 @@ nest g class events/entities/event.entity --no-spec
 **Indexes**
 
 Are special lookup tables that our DB search engine can use to speed up data retrieval.
+
+**Migrations**
+
+Provide a way to incrementally update the database schema and keep it in sync with the applications data model, all while preserving existing data in our database.
+
+TypeORM migrations need to work on compiled files, which NestJS will help output in the /dist folder.
+
+```bash
+# manually create a migration
+npx typeorm migration:create -n CoffeeRefactor
+# automatically create a migration
+npx typeorm migration:generate -n SchemaSync
+```
+
+Prior to executing a migration, we need to make sure we build the source code so that TypeORM CLI can find the entities and migration files in the /dist folder.
+
+```bash
+# we must compile the code after the changes are done to the entities
+npm run build
+
+# to execute the migration (Up method)
+npx typeorm migration:run
+# to revert the migration (Down method)
+npx typeorm migration:revert
+```
