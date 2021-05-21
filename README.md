@@ -175,3 +175,13 @@ Relations are not eagerly loaded by default.
 ```bash
 nest g class common/dto/pagination-query.dto --no-spec
 ```
+
+**Transactions**
+
+Transaction statements can help us to achieve multiple actions to our database ensuring they only happen if everything is successful.
+
+- In case something goes wrong, the transaction will rollback any changes, so both operations must be successful.
+
+```bash
+nest g class events/entities/event.entity --no-spec
+```
