@@ -368,3 +368,11 @@ Handling timeouts with interceptors:
 ```bash
 nest g interceptor common/interceptors/timeout
 ```
+
+**Pipes**
+
+NestJS triggers a Pipe just before any method is invoked.
+
+```bash
+nest g pipe common/pipes/parse-int
+```
