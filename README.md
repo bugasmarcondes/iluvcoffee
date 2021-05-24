@@ -270,3 +270,14 @@ npm install @nestjs/config
 - Create a .env file to store the environment variables
 - Add the .env into .gitignore
 - +process.env.DATABASE_PORT, to cast it into a number
+
+Optional properties that can be used:
+
+```bash
+ConfigModule.forRoot({
+  # to specify a different directory and name for the .env file
+  envFilePath: '.environment',
+  # to ignore the env file
+  ignoreEnvFile: true,
+}),
+```
