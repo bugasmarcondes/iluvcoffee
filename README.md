@@ -357,8 +357,14 @@ nest g mo common
 
 **Interceptors**
 
-On this example it will wrap our data into a data property automatically.
+On this example it will wrap our data into a data property automatically:
 
 ```bash
 nest g interceptor common/interceptors/wrap-response
+```
+
+Handling timeouts with interceptors:
+
+```bash
+nest g interceptor common/interceptors/timeout
 ```
