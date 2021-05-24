@@ -354,3 +354,11 @@ To solve that, we need a new module:
 ```bash
 nest g mo common
 ```
+
+**Interceptors**
+
+On this example it will wrap our data into a data property automatically.
+
+```bash
+nest g interceptor common/interceptors/wrap-response
+```
