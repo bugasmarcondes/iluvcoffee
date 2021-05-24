@@ -336,3 +336,21 @@ Has a single responsibility, which is to determine whether a given request is al
 ```bash
 nest g guard common/guards/api-key
 ```
+
+Global guards that make use of other classes, must be registered within a module. In our case, it was being used directly on main.ts, thus, resulting on the following error:
+
+```bash
+src/main.ts:20:23 - error TS2554: Expected 2 arguments, but got 0.
+20   app.useGlobalGuards(new ApiKeyGuard());
+                         ~~~~~~~~~~~~~~~~~
+  src/common/guards/api-key.guard.ts:11:5
+    11     private readonly reflector: Reflector,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    An argument for 'reflector' was not provided.
+```
+
+To solve that, we need a new module:
+
+```bash
+nest g mo common
+```
