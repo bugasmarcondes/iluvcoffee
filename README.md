@@ -260,3 +260,13 @@ There are 3 types of scope providers:
 - Request, provides a new instance of the provider exclusively for each incoming request. The instance is automatically garbage collected after the request has completed processing. Using it may have a high impact on performance.
   - (e.g.: coffees.service.ts)
     - @Injectable({ scope: Scope.REQUEST })
+
+**Config Module**
+
+```bash
+npm install @nestjs/config
+```
+
+- Create a .env file to store the environment variables
+- Add the .env into .gitignore
+- +process.env.DATABASE_PORT, to cast it into a number
