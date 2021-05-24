@@ -301,3 +301,20 @@ With custom configuration files we can create different configurations but it's 
   - Transform the result returned from a method.
   - Extend method behavior.
   - Completely override a method.
+
+Binding techniques, making use of the @UsePipes(ValidationPipe), that can be placed in several places, depending on our need:
+
+- Global scoped
+  - Check app.useGlobalPipes at main.ts
+  - Or inside a module provider
+
+```bash
+{
+  provide: APP_PIPE,
+  useClass: ValidationPipe,
+}
+```
+
+- Controller scoped, via @UsePipes(ValidationPipe) right before @Controller
+- Method scoped, via @UsePipes(ValidationPipe) right before @Get or any other route/method
+- Param scoped (pipes only), via the parameter itself with @Body(ValidationPipe) updateCoffeeDto: UpdateCoffeeDto
