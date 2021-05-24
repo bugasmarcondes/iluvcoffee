@@ -2,6 +2,8 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+- ./src/common, to keep things that are not specific to any Domain.
+
 ## Installation
 
 ```bash
@@ -326,3 +328,11 @@ nest g filter common/filters/http-exception
 ```
 
 By calling a unexisting route, it throws an HttpErrorException: http://localhost:3000/coffees/-1
+
+**Guards**
+
+Has a single responsibility, which is to determine whether a given request is allowed to access something.
+
+```bash
+nest g guard common/guards/api-key
+```
