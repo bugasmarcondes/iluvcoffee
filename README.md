@@ -281,3 +281,10 @@ ConfigModule.forRoot({
   ignoreEnvFile: true,
 }),
 ```
+
+Validating the environment variables:
+
+```bash
+npm install @hapi/joi
+npm install --save-dev @types/hapi__joi
+```
