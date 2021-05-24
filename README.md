@@ -290,3 +290,14 @@ npm install --save-dev @types/hapi__joi
 ```
 
 With custom configuration files we can create different configurations but it's recommended for simpler projects (it has no type inference for example). If we have deeply nested configurations, we might want to use Configuration Namespaces.
+
+**More Building Blocks**
+
+- Exception filters, are responsible for handling and processing unhandled exceptions that might occur in the application.
+- Pipes, are useful to handle 2 things 'transformations' and 'validation'.
+- Guards, are responsible for telling if a given request needs certain conditions like authentication, authorizations, roles, acls, etc.
+- Interceptors, make it possible to:
+  - Bind extra logic before or after the method execution.
+  - Transform the result returned from a method.
+  - Extend method behavior.
+  - Completely override a method.
