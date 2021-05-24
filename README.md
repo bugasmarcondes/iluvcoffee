@@ -318,3 +318,11 @@ Binding techniques, making use of the @UsePipes(ValidationPipe), that can be pla
 - Controller scoped, via @UsePipes(ValidationPipe) right before @Controller
 - Method scoped, via @UsePipes(ValidationPipe) right before @Get or any other route/method
 - Param scoped (pipes only), via the parameter itself with @Body(ValidationPipe) updateCoffeeDto: UpdateCoffeeDto
+
+**Catch Exceptions with Filters**
+
+```bash
+nest g filter common/filters/http-exception
+```
+
+By calling a unexisting route, it throws an HttpErrorException: http://localhost:3000/coffees/-1
