@@ -288,3 +288,5 @@ Validating the environment variables:
 npm install @hapi/joi
 npm install --save-dev @types/hapi__joi
 ```
+
+With custom configuration files we can create different configurations but it's recommended for simpler projects (it has no type inference for example). If we have deeply nested configurations, we might want to use Configuration Namespaces.

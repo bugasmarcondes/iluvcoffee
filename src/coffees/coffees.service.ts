@@ -19,11 +19,7 @@ export class CoffeesService {
     private readonly connection: Connection,
     private readonly configService: ConfigService,
   ) {
-    // we set <string> only to inform the compiler, because in reality all environment variables comes as a string
-    const databaseHost = this.configService.get<string>(
-      'DATABASE_HOST',
-      'localhost',
-    );
+    const databaseHost = this.configService.get('database.host', 'localhost');
     console.log(databaseHost);
   }
 
