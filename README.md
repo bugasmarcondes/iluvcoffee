@@ -409,4 +409,6 @@ npm i @nestjs/swagger swagger-ui-express
 ```bash
 # to execute the tests for a given file
 npm run test:watch -- coffees.service
+# to execute the e2e tests for a set of files
+npm run test:e2e -- coffees
 ```
