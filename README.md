@@ -412,3 +412,33 @@ npm run test:watch -- coffees.service
 # to execute the e2e tests for a set of files
 npm run test:e2e -- coffees
 ```
+
+**MongoDB**
+
+```bash
+git checkout section_2
+```
+
+Create the docker-compose and bring the container up by executing:
+
+```bash
+# if nothing is passed, docker-compose will spawn all the services defined
+docker-compose up -d
+
+# if needed we can specify what service to run by
+docker-compose up db -d
+```
+
+**Mongoose**
+
+```bash
+npm i mongoose @nestjs/mongoose
+# this is resulting in several error when we try to execute our program
+npm i -D @types/mongoose
+```
+
+**Data Model**
+
+Responsible for creating, reading and deleting documents from the Mongo DB.
+
+Every schema we create maps to a MongoDB collection, and define the shape of the documents within that collection.
