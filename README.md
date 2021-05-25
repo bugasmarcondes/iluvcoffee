@@ -141,3 +141,9 @@ npm i mongoose @nestjs/mongoose
 # this is resulting in several error when we try to execute our program
 npm i -D @types/mongoose
 ```
+
+**Data Model**
+
+Responsible for creating, reading and deleting documents from the Mongo DB.
+
+Every schema we create maps to a MongoDB collection, and define the shape of the documents within that collection.
