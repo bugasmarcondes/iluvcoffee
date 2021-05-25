@@ -133,3 +133,11 @@ docker-compose up -d
 # if needed we can specify what service to run by
 docker-compose up db -d
 ```
+
+**Mongoose**
+
+```bash
+npm i mongoose @nestjs/mongoose
+# this is resulting in several error when we try to execute our program
+npm i -D @types/mongoose
+```
