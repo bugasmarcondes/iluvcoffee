@@ -376,3 +376,16 @@ NestJS triggers a Pipe just before any method is invoked.
 ```bash
 nest g pipe common/pipes/parse-int
 ```
+
+**Middleware**
+
+Is a function that is called before the route handler and any other building blocks are processed.
+
+Can be used as:
+
+- Function, which are stateless and can't inject dependencies.
+- Class, which can rely on external dependencies and inject providers that are registered on the same module scope.
+
+```bash
+nest g middleware common/middleware/logging
+```
