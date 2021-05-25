@@ -403,3 +403,10 @@ It uses Open API Specification, which is a definition format used to describe Re
 ```bash
 npm i @nestjs/swagger swagger-ui-express
 ```
+
+**Testing**
+
+```bash
+# to execute the tests for a given file
+npm run test:watch -- coffees.service
+```
