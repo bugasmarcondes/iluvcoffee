@@ -389,3 +389,7 @@ Can be used as:
 ```bash
 nest g middleware common/middleware/logging
 ```
+
+**Decorators**
+
+Are simply functions that apply logic.
