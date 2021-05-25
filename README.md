@@ -117,3 +117,19 @@ Filter properties that should not be received by a method handler.
 - transform: true,
   - makes console.log(createCoffeeDto instanceof CreateCoffeeDto) return true
   - this feature may impact performance
+
+**MongoDB**
+
+```bash
+git checkout section_2
+```
+
+Create the docker-compose and bring the container up by executing:
+
+```bash
+# if nothing is passed, docker-compose will spawn all the services defined
+docker-compose up -d
+
+# if needed we can specify what service to run by
+docker-compose up db -d
+```
