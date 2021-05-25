@@ -393,3 +393,13 @@ nest g middleware common/middleware/logging
 **Decorators**
 
 Are simply functions that apply logic.
+
+**Swagger**
+
+Responsible for documenting how the application works by showing what our API expects.
+
+It uses Open API Specification, which is a definition format used to describe Restful API.
+
+```bash
+npm i @nestjs/swagger swagger-ui-express
+```
